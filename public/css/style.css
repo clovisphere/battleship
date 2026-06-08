@@ -513,6 +513,18 @@ body.diff-hacker #timer.urgent {
     color: var(--text-muted);
 }
 
+#best {
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    min-height: 1.2em;
+}
+
+#best.new-best {
+    color: var(--text);
+    animation: fadeIn 0.4s ease;
+}
+
 
 #actions {
     display: flex;

@@ -41,6 +41,7 @@ let ship, shipPositions, guesses, attempts;
 const board        = document.getElementById("board");
 const msgEl        = document.getElementById("status");
 const attemptsEl   = document.getElementById("attempts");
+const bestEl       = document.getElementById("best");
 const timerEl      = document.getElementById("timer");
 const subtitleEl   = document.querySelector(".subtitle");
 const giveUp       = document.getElementById("give-up");
@@ -48,6 +49,16 @@ const replay       = document.getElementById("replay");
 const winTag       = document.getElementById("win-tag");
 const game         = document.getElementById("game");
 const matrixCanvas = document.getElementById("matrix-bg");
+
+const bestKey          = (diff) => `strike_best_${diff}`;
+const loadBest         = (diff) => { const v = localStorage.getItem(bestKey(diff)); return v !== null ? parseInt(v, 10) : null; };
+const saveBest         = (diff, n) => localStorage.setItem(bestKey(diff), String(n));
+const updateBestDisplay = (isNew = false) => {
+  const best = loadBest(difficulty);
+  if (best === null) { bestEl.textContent = ""; bestEl.className = ""; return; }
+  bestEl.textContent = `Best: ${best} attempt${best > 1 ? "s" : ""}`;
+  bestEl.className = isNew ? "new-best" : "";
+};
 
 let sonarTimer = null;
 let countdownInterval = null;
@@ -124,6 +135,7 @@ const init = () => {
   winTag.classList.remove("visible");
   msgEl.textContent = "";
   attemptsEl.textContent = "";
+  updateBestDisplay();
   replay.classList.remove("visible");
   giveUp.classList.add("visible");
   board.innerHTML = "";
@@ -203,10 +215,14 @@ const handleGuess = (index, cell) => {
   attemptsEl.textContent = `Attempts: ${attempts} / ${maxAttempts}  ·  Hits: ${hits} / ${SHIP_LENGTH}`;
 
   if (ship.size === 0) {
+    const best = loadBest(difficulty);
+    const isNew = best === null || attempts < best;
+    if (isNew) saveBest(difficulty, attempts);
     msgEl.textContent = WIN_MESSAGES[difficulty](attempts);
     playSound("win");
     launchConfetti();
     endGame(true);
+    updateBestDisplay(isNew);
   } else if (attempts >= maxAttempts) {
     msgEl.textContent = "Out of attempts — ship escaped!";
     playSound("lose");
