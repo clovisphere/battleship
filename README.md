@@ -1,13 +1,13 @@
 ```
-  .-')                     .-') _ .-. .-')                  .-') _   ,---. 
- ( OO ).                  ( OO ) )\  ( OO )                (  OO) )  |   | 
-(_)---\_) ,--. ,--.   ,--./ ,--,' ,--. ,--.         ,-.-') /     '._ |   | 
-/    _ |  |  | |  |   |   \ |  |\ |  .'   /         |  |OO)|'--...__)|   | 
-\  :` `.  |  | | .-') |    \|  | )|      /,         |  |  \'--.  .--'|   | 
- '..`''.) |  |_|( OO )|  .     |/ |     ' _)        |  |(_/   |  |   |  .' 
-.-._)   \ |  | | `-' /|  |\    |  |  .   \         ,|  |_.'   |  |   `--'  
-\       /('  '-'(_.-' |  | \   |  |  |\   \       (_|  |      |  |   .--.  
- `-----'   `-----'    `--'  `--'  `--' '--'         `--'      `--'   '--'  
+  .-')                     .-') _ .-. .-')                  .-') _   ,---.
+ ( OO ).                  ( OO ) )\  ( OO )                (  OO) )  |   |
+(_)---\_) ,--. ,--.   ,--./ ,--,' ,--. ,--.         ,-.-') /     '._ |   |
+/    _ |  |  | |  |   |   \ |  |\ |  .'   /         |  |OO)|'--...__)|   |
+\  :` `.  |  | | .-') |    \|  | )|      /,         |  |  \'--.  .--'|   |
+ '..`''.) |  |_|( OO )|  .     |/ |     ' _)        |  |(_/   |  |   |  .'
+.-._)   \ |  | | `-' /|  |\    |  |  .   \         ,|  |_.'   |  |   `--'
+\       /('  '-'(_.-' |  | \   |  |  |\   \       (_|  |      |  |   .--.
+ `-----'   `-----'    `--'  `--'  `--' '--'         `--'      `--'   '--'
                — battleship —
 ```
 
@@ -22,11 +22,11 @@ A single-player battleship game played in the browser. Find and sink the hidden 
 
 ## Difficulty modes
 
-| Mode   | Attempts | Timer | Ship placement | Rule |
-|--------|----------|-------|----------------|------|
-| 🐣 N00b   | 6 | — | Consecutive | — |
-| 🥷 Ninja  | 4 | 10 s | Consecutive | Ends early if remaining attempts can't cover remaining hits |
-| 👾 Hacker | 3 | 5 s  | Random | Any miss ends the game immediately |
+| Mode      | Attempts | Timer | Ship placement | Rule                                                        |
+| --------- | -------- | ----- | -------------- | ----------------------------------------------------------- |
+| 🐣 N00b   | 6        | —     | Consecutive    | —                                                           |
+| 🥷 Ninja  | 4        | 10 s  | Consecutive    | Ends early if remaining attempts can't cover remaining hits |
+| 👾 Hacker | 3        | 5 s   | Random         | Any miss ends the game immediately                          |
 
 - In **Ninja** and **Hacker** modes a 10 s / 5 s countdown starts when the game begins.
 - Each hit adds **+5 seconds** to the clock.
@@ -34,11 +34,11 @@ A single-player battleship game played in the browser. Find and sink the hidden 
 
 ## Cell icons
 
-| Event | N00b | Ninja | Hacker |
-|-------|------|-------|--------|
-| Hit   | 🚢 | 💥 | ☠ |
-| Miss  | 🌊 | 💨 | ✗ |
-| Reveal (loss) | ⚓ | ⚓ | ? |
+| Event         | N00b | Ninja | Hacker |
+| ------------- | ---- | ----- | ------ |
+| Hit           | 🚢   | 💥    | ☠      |
+| Miss          | 🌊   | 💨    | ✗      |
+| Reveal (loss) | ⚓   | ⚓    | ?      |
 
 ## Running locally
 
@@ -48,7 +48,7 @@ bun run dev
 
 Then open `http://localhost:3000`.
 
-Or with Python if you don't have Bun:
+Or with [Python](https://www.python.org/) if you don't have [Bun](https://bun.com/):
 
 ```bash
 python -m http.server 3000
