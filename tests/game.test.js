@@ -77,8 +77,8 @@ describe("isAborted", () => {
 });
 
 describe("DIFFICULTIES config", () => {
-  it("n00b is forgiving — no timer, not strict", () => {
-    expect(DIFFICULTIES.n00b.timer).toBeNull();
+  it("n00b is forgiving — generous timer, not strict", () => {
+    expect(DIFFICULTIES.n00b.timer).toBe(15);
     expect(DIFFICULTIES.n00b.strict).toBe(false);
     expect(DIFFICULTIES.n00b.maxAttempts).toBe(6);
   });

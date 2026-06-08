@@ -24,11 +24,11 @@ A single-player battleship game played in the browser. Find and sink the hidden 
 
 | Mode      | Attempts | Timer | Ship placement | Rule                                                        |
 | --------- | -------- | ----- | -------------- | ----------------------------------------------------------- |
-| 🐣 N00b   | 6        | —     | Consecutive    | —                                                           |
+| 🐣 N00b   | 6        | 15 s  | Consecutive    | —                                                           |
 | 🥷 Ninja  | 4        | 10 s  | Consecutive    | Ends early if remaining attempts can't cover remaining hits |
 | 👾 Hacker | 3        | 5 s   | Random         | Any miss ends the game immediately                          |
 
-- In **Ninja** and **Hacker** modes a 10 s / 5 s countdown starts when the game begins.
+- All modes have a countdown: **N00b** 15 s, **Ninja** 10 s, **Hacker** 5 s.
 - Each hit adds **+5 seconds** to the clock.
 - Letting the timer reach zero is an instant loss.
 
