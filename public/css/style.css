@@ -77,6 +77,10 @@ body.diff-n00b .cell.reveal .cell-icon {
 
 
 
+body.diff-n00b #timer {
+    color: #e07a3d;
+}
+
 body.diff-n00b #replay {
     color: #e07a3d;
     border-color: rgba(224, 122, 61, 0.4);
@@ -715,5 +719,43 @@ body.diff-hacker #give-up:hover {
     100% {
         transform: translateY(105vh) rotate(720deg);
         opacity: 0;
+    }
+}
+
+/* ── Mobile / touch ── */
+.cell,
+.diff-btn,
+#give-up,
+#replay {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Disable hover scale on touch — prevents it sticking after a tap */
+@media (hover: none) {
+    .cell:hover:not(.hit):not(.miss) {
+        transform: none;
+    }
+
+    .cell:active:not(.hit):not(.miss) {
+        background: var(--cell-hover-bg);
+        border-color: rgba(0, 150, 135, 0.5);
+        transform: scale(0.94);
+    }
+}
+
+/* Landscape phones: compress vertical rhythm */
+@media (max-height: 500px) and (orientation: landscape) {
+    main {
+        gap: 0.75rem;
+    }
+
+    .subtitle {
+        display: none;
+    }
+
+    footer {
+        min-height: unset;
+        gap: 0.25rem;
     }
 }
