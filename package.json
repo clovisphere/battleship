@@ -1,0 +1,7 @@
+{
+  "name": "battleship",
+  "private": true,
+  "scripts": {
+    "dev": "bun run server.js"
+  }
+}
