@@ -312,5 +312,5 @@ giveUp.addEventListener("click", () => {
   endGame(false, "You gave up — ship revealed!");
 });
 
-replay.addEventListener("click", init);
+replay.addEventListener("click", () => { init(); startGame(); });
 init();
