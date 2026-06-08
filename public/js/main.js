@@ -57,10 +57,11 @@ const stopCountdown = () => {
 const startCountdown = () => {
   stopCountdown();
   timeRemaining = DIFFICULTIES[difficulty].timer;
+  const urgent = Math.round(timeRemaining / 3);
   const tick = () => {
     timerEl.textContent = `0:${String(timeRemaining).padStart(2, "0")}`;
-    timerEl.className = timeRemaining <= 5 ? "urgent" : "";
-    if (timeRemaining <= 5 && timeRemaining > 0) playSound("tick");
+    timerEl.className = timeRemaining <= urgent ? "urgent" : "";
+    if (timeRemaining <= urgent && timeRemaining > 0) playSound("tick");
     if (timeRemaining === 0) {
       stopCountdown();
       msgEl.textContent = "Time's up — ship escaped!";
@@ -75,9 +76,10 @@ const startCountdown = () => {
 };
 
 const sonarDelay = () => {
-  const remaining = DIFFICULTIES[difficulty].maxAttempts - attempts;
-  if (remaining <= 1) return 650;
-  if (remaining <= 3) return 1100;
+  const { maxAttempts } = DIFFICULTIES[difficulty];
+  const ratio = (maxAttempts - attempts) / maxAttempts;
+  if (ratio <= 0.25) return 650;
+  if (ratio <= 0.5)  return 1100;
   return 2000;
 };
 

@@ -2,6 +2,7 @@ import { describe, it, expect } from "bun:test";
 import {
   BOARD_SIZE,
   SHIP_LENGTH,
+  TIMER_BONUS,
   DIFFICULTIES,
   randomPositions,
   consecutivePositions,
@@ -73,6 +74,12 @@ describe("isAborted", () => {
     expect(isAborted(true, 3, 2)).toBe(true);
     expect(isAborted(true, 2, 1)).toBe(true);
     expect(isAborted(true, 1, 0)).toBe(true);
+  });
+});
+
+describe("TIMER_BONUS", () => {
+  it("is 5 seconds", () => {
+    expect(TIMER_BONUS).toBe(5);
   });
 });
 
