@@ -74,6 +74,8 @@ export const buildBoard = (difficulty) => {
   }));
 };
 
+export const isUnwinnable = (shotsLeft, beastsLeft) => shotsLeft < beastsLeft;
+
 export const hintFor = (board) => {
   const hidden = board.reduce((acc, c, i) => (c.treasure && !c.revealed ? [...acc, i] : acc), []);
   if (!hidden.length) return null;

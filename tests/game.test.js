@@ -1,5 +1,5 @@
 import { describe, it, expect } from "bun:test";
-import { ROWS, COLS, DIFFICULTIES, CREATURES, buildBoard, hintFor } from "../public/js/game.js";
+import { ROWS, COLS, DIFFICULTIES, CREATURES, buildBoard, hintFor, isUnwinnable } from "../public/js/game.js";
 
 const TOTAL_CELLS  = ROWS * COLS;
 const TOTAL_BEASTS = CREATURES.length;
@@ -114,6 +114,24 @@ describe("buildBoard", () => {
     for (let t = 0; t < 30; t++) {
       expect(buildBoard("noob").filter(c => c.treasure).length).toBe(TOTAL_BEASTS);
     }
+  });
+});
+
+describe("isUnwinnable", () => {
+  it("returns false when shots equal beasts remaining", () => {
+    expect(isUnwinnable(6, 6)).toBe(false);
+    expect(isUnwinnable(1, 1)).toBe(false);
+  });
+
+  it("returns false when shots exceed beasts remaining", () => {
+    expect(isUnwinnable(7, 6)).toBe(false);
+    expect(isUnwinnable(10, 1)).toBe(false);
+  });
+
+  it("returns true when shots are fewer than beasts remaining", () => {
+    expect(isUnwinnable(5, 6)).toBe(true);
+    expect(isUnwinnable(0, 1)).toBe(true);
+    expect(isUnwinnable(2, 3)).toBe(true);
   });
 });
 

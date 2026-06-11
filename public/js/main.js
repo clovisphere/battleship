@@ -1,5 +1,5 @@
 import { playSound, setSoundEnabled } from "./sound.js";
-import { ROWS, COLS, DIFFICULTIES, CREATURES, buildBoard, hintFor } from "./game.js";
+import { ROWS, COLS, DIFFICULTIES, CREATURES, buildBoard, hintFor, isUnwinnable } from "./game.js";
 
 const app = document.getElementById("app");
 const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
@@ -232,7 +232,7 @@ const fire = (i) => {
   if (found >= state.total) {
     launchConfetti();
     setTimeout(() => finish("win"), 650);
-  } else if (shots <= 0) {
+  } else if (shots <= 0 || isUnwinnable(shots, state.total - found)) {
     setTimeout(() => finish("lose"), 650);
   } else if (DIFFICULTIES[state.difficulty].hints && !cell.treasure) {
     setTimeout(() => {
