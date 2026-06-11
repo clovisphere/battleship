@@ -10,12 +10,18 @@
               ╚═════╝
 
    ╔═══╤═══╤═══╤═══╤═══╤═══╤═══╗
+   ║ · │ · │ · │ · │ · │ · │ · ║
+   ╠═══╪═══╪═══╪═══╪═══╪═══╪═══╣
    ║ · │ · │ ▓ │ ▓ │ ▓ │ · │ · ║
+   ╠═══╪═══╪═══╪═══╪═══╪═══╪═══╣
+   ║ · │ · │ · │ · │ · │ · │ · ║
+   ╠═══╪═══╪═══╪═══╪═══╪═══╪═══╣
+   ║ · │ · │ · │ · │ · │ · │ · ║
    ╚═══╧═══╧═══╧═══╧═══╧═══╧═══╝
                — Blip —
 ```
 
-A single-player hidden-location deduction game played in the browser. Find and sink the hidden 3-cell ship on a 7-cell grid before you run out of attempts — or time.
+Hunt the hidden fleet — fire on a 4×7 grid before your attempts or time run out.
 
 ## How to play
 
@@ -26,11 +32,11 @@ A single-player hidden-location deduction game played in the browser. Find and s
 
 ## Difficulty modes
 
-| Mode      | Attempts | Timer | Ship placement | Rule                                                        |
-| --------- | -------- | ----- | -------------- | ----------------------------------------------------------- |
-| 🐣 N00b   | 6        | 15 s  | Consecutive    | Ends early if remaining attempts can't cover remaining hits |
-| 🥷 Ninja  | 4        | 10 s  | Consecutive    | Ends early if remaining attempts can't cover remaining hits |
-| 👾 Hacker | 3        | 5 s   | Random         | Any miss ends the game immediately                          |
+| Mode      | Attempts | Timer | Ship placement      | Rule                                                        |
+| --------- | -------- | ----- | ------------------- | ----------------------------------------------------------- |
+| 🐣 N00b   | 6        | 15 s  | Consecutive (H/V)   | Ends early if remaining attempts can't cover remaining hits |
+| 🥷 Ninja  | 4        | 10 s  | Consecutive (H/V)   | Ends early if remaining attempts can't cover remaining hits |
+| 👾 Hacker | 3        | 5 s   | Random (scattered)  | Any miss ends the game immediately                          |
 
 - All modes have a countdown: **N00b** 15 s, **Ninja** 10 s, **Hacker** 5 s.
 - Each hit adds **+5 seconds** to the clock.
@@ -63,7 +69,7 @@ python -m http.server 3000
 ## Project structure
 
 ```
-battleship/
+blip/
 ├── index.html
 ├── package.json
 ├── server.js             # Bun static file server
@@ -81,9 +87,10 @@ battleship/
 ## TODO
 
 - [x] Add unit tests (game logic — ship placement, hit/miss, abort conditions)
-- [ ] Add end-to-end tests (Playwright)
 - [x] Mobile touch improvements
 - [x] High score persistence across difficulty resets
+- [ ] Rebalance difficulty attempts and timers for the 4×7 grid
+- [ ] Add end-to-end tests (Playwright)
 
 ## Tech
 
