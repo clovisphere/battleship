@@ -62,7 +62,7 @@ body {
 }
 
 .tagline {
-  font-size: 18px;
+  font-size: 20px;
   color: #5a5146;
   line-height: 1.5;
 }
@@ -75,7 +75,7 @@ body {
   text-shadow: 3px 3px 0 #2b2b2b;
 }
 
-.levels-sub { font-size: 18px; color: #6a6256; }
+.levels-sub { font-size: 20px; color: #6a6256; }
 
 /* ── Buttons ── */
 .btn-primary {
@@ -121,11 +121,12 @@ body {
   background: transparent;
   border: none;
   font-family: "Patrick Hand", cursive;
-  font-size: 16px;
+  font-size: 18px;
   color: #7a7468;
   text-decoration: underline;
   cursor: pointer;
-  padding: 4px;
+  padding: 10px 8px;
+  min-height: 44px;
 }
 
 .btn-sound {
@@ -171,7 +172,7 @@ body {
   border-radius: 20px;
   padding: 5px 14px;
   background: #fffdf6;
-  font-size: 14px;
+  font-size: 16px;
   color: #7a7468;
 }
 
@@ -215,14 +216,14 @@ body {
 .lv-name.ninja  { color: #0e7c86; }
 .lv-name.hacker { color: #e23b6d; }
 
-.lv-desc         { font-size: 16px; color: #4a4338; }
+.lv-desc         { font-size: 18px; color: #4a4338; }
 .hacker-desc     { color: #f0e9e9; }
 
 .lv-badge {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 15px;
+  font-size: 17px;
   border: 2.5px solid #2b2b2b;
   border-radius: 20px;
   padding: 4px 12px;
@@ -233,7 +234,7 @@ body {
 .ninja-badge  { background: #e6f4f5; }
 .hacker-badge { background: #3a1020; color: #fff; border-color: #fff; box-shadow: 2px 2px 0 rgba(255,255,255,0.2); }
 
-.badge-sub    { font-size: 13px; color: #7a8a7e; }
+.badge-sub    { font-size: 15px; color: #7a8a7e; }
 .hacker-sub   { color: #caa; }
 
 /* ── HUD ── */
@@ -265,10 +266,10 @@ body {
   box-shadow: 2px 2px 0 #2b2b2b;
 }
 
-.shots-word { font-family: "Patrick Hand", cursive; font-size: 14px; color: #7a7468; }
+.shots-word { font-family: "Patrick Hand", cursive; font-size: 16px; color: #7a7468; }
 
 .pips-group { display: flex; align-items: center; gap: 8px; }
-.pips-lbl   { font-size: 14px; color: #7a7468; }
+.pips-lbl   { font-size: 16px; color: #7a7468; }
 .pips       { display: flex; gap: 4px; }
 
 .pip    { width: 20px; height: 14px; border: 2px solid #2b2b2b; border-radius: 3px; background: #fff; }
@@ -305,7 +306,7 @@ body {
   grid-template-columns: repeat(7, 1fr);
   gap: 6px;
   text-align: center;
-  font-size: 13px;
+  font-size: 15px;
   color: #bfe9eb;
 }
 
@@ -313,7 +314,7 @@ body {
   display: grid;
   grid-template-rows: repeat(4, 1fr);
   gap: 6px;
-  font-size: 13px;
+  font-size: 15px;
   color: #bfe9eb;
   text-align: center;
   align-items: center;
@@ -353,7 +354,7 @@ body {
   align-items: center;
   justify-content: center;
   color: #9ac9cc;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .cell-miss {
@@ -363,7 +364,7 @@ body {
   align-items: center;
   justify-content: center;
   color: #5b7e82;
-  font-size: 22px;
+  font-size: 24px;
   animation: blipReveal 0.28s ease-out;
 }
 
@@ -385,7 +386,7 @@ body {
   background: #fff;
   border-radius: 16px;
   padding: 12px 14px;
-  font-size: 16px;
+  font-size: 18px;
   color: #3a342b;
   box-shadow: 3px 3px 0 #2b2b2b;
   min-height: 60px;
@@ -419,7 +420,7 @@ body {
 
 .win-col  { color: #0e7c86; }
 .lose-col { color: #5a6b6e; }
-.end-line { font-size: 20px; color: #4a4338; }
+.end-line { font-size: 22px; color: #4a4338; }
 
 .end-stats {
   display: flex;
@@ -433,7 +434,7 @@ body {
   border-radius: 14px;
   background: #fffdf6;
   padding: 7px 16px;
-  font-size: 16px;
+  font-size: 18px;
   box-shadow: 2px 2px 0 #2b2b2b;
 }
 
@@ -490,6 +491,13 @@ body {
   .sidekick  { flex-direction: row; flex: 1 1 auto; width: 100%; }
   .sea-board { flex: 1 1 100%; }
   .speech    { flex: 1; }
+}
+
+@media (max-width: 400px) {
+  .hud-mode   { font-size: 22px; }
+  .shots-left { font-size: 22px; padding: 4px 10px; }
+  .lv-desc    { font-size: 16px; }
+  .level-card { width: 100%; }
 }
 
 @media (max-height: 500px) and (orientation: landscape) {
