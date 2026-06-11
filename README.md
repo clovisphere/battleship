@@ -2,6 +2,10 @@
 [![Bun](https://img.shields.io/badge/Bun-1.2-black?logo=bun)](https://bun.sh)
 [![Vanilla JS](https://img.shields.io/badge/Vanilla_JS-ES2020-yellow?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
+<p align="center">
+  <img src="public/img/captain-blip.png" alt="Captain Blip" width="160" />
+</p>
+
 **Blip** — a pirate-themed deduction game for ages 9–12. Six hidden sea creatures lurk on a 4×7 grid. Fire cannonballs to find them all before you run out of shots.
 
 ## How to play
