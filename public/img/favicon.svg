@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- background -->
+  <rect width="32" height="32" rx="7" fill="#0e7c86"/>
+  <!-- hat brim -->
+  <ellipse cx="16" cy="14" rx="10" ry="2.5" fill="#1e2d3d"/>
+  <!-- hat crown -->
+  <path d="M9,14 Q9,6 16,6 Q23,6 23,14Z" fill="#2f4761"/>
+  <!-- gold star -->
+  <circle cx="16" cy="9.5" r="1.5" fill="#ffd23f"/>
+  <!-- face -->
+  <ellipse cx="16" cy="22" rx="7.5" ry="6.5" fill="#f2c189"/>
+  <!-- brow stripe -->
+  <rect x="9.5" y="17" width="13" height="1.8" rx="0.9" fill="#15202c" transform="rotate(-5,16,17.9)"/>
+  <!-- eye patch -->
+  <rect x="9.5" y="18.5" width="5.5" height="3.5" rx="1" fill="#15202c"/>
+  <!-- right eye -->
+  <circle cx="20.5" cy="20.2" r="2.6" fill="#fff"/>
+  <circle cx="20.5" cy="20.2" r="1.2" fill="#1a1a1a"/>
+  <!-- blush -->
+  <ellipse cx="11.5" cy="24" rx="2" ry="1.1" fill="#ef9aa0" opacity="0.75"/>
+  <ellipse cx="20.5" cy="24" rx="2" ry="1.1" fill="#ef9aa0" opacity="0.75"/>
+  <!-- smile -->
+  <path d="M13.5,25.5 Q16,27.5 18.5,25.5" stroke="#8a3540" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+</svg>
