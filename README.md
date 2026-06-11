@@ -8,10 +8,10 @@
    ╔═══╤═══╤═══╤═══╤═══╤═══╤═══╗
    ║ · │ · │ ▓ │ ▓ │ ▓ │ · │ · ║
    ╚═══╧═══╧═══╧═══╧═══╧═══╧═══╝
-            — Strike! —
+               — Blip —
 ```
 
-A single-player battleship game played in the browser. Find and sink the hidden 3-cell ship on a 7-cell grid before you run out of attempts — or time.
+A single-player hidden-location deduction game played in the browser. Find and sink the hidden 3-cell ship on a 7-cell grid before you run out of attempts — or time.
 
 ## How to play
 

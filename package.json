@@ -1,5 +1,5 @@
 {
-  "name": "battleship",
+  "name": "blip",
   "private": true,
   "scripts": {
     "dev": "bun run server.js",

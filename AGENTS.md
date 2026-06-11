@@ -1,8 +1,8 @@
-# Strike! — Agent & Developer Guide
+# Blip — Agent & Developer Guide
 
 ## Project
 
-Single-player browser Battleship game. A 3-cell ship is hidden on a 7-cell grid; the player fires shots until the ship sinks, time runs out, or it becomes mathematically impossible to win.
+Single-player browser hidden-location deduction game. A ship is hidden on the grid; the player fires shots until the ship sinks, time runs out, or it becomes mathematically impossible to win.
 
 ## Stack
 
