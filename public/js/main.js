@@ -175,17 +175,20 @@ const winHTML = () => {
   </div>`;
 };
 
-const loseHTML = () =>
-  `<div class="screen screen-end">
+const loseHTML = () => {
+  const title = state.shotsLeft > 0 ? "OUTNUMBERED!" : "OUT OF CANNONBALLS!";
+  const levelBtn = state.difficulty === "noob" ? "New level" : "Easier level";
+  return `<div class="screen screen-end">
     ${blip("sad", "150px")}
-    <h2 class="end-title lose-col">OUT OF CANNONBALLS!</h2>
+    <h2 class="end-title lose-col">${title}</h2>
     <p class="end-line">${state.line}</p>
     <span class="stat-pill">Found ${state.found} of ${state.total} beasts</span>
     <div class="end-btns">
       <button class="btn-primary" data-action="play-again">TRY AGAIN</button>
-      <button class="btn-secondary" data-action="levels">Easier level</button>
+      <button class="btn-secondary" data-action="levels">${levelBtn}</button>
     </div>
   </div>`;
+};
 
 // ── render ────────────────────────────────────────────────────────────────────
 const SCREENS = { home: homeHTML, levels: levelsHTML, play: playHTML, win: winHTML, lose: loseHTML };
