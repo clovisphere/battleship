@@ -1,5 +1,7 @@
 # --- SECTION: Metadata ---
-FROM oven/bun:1.2-alpine
+ARG BUN_VERSION=1.2
+
+FROM oven/bun:${BUN_VERSION}-alpine
 
 LABEL maintainer="Clovis Mugaruka <clovis.mugaruka@gmail.com>"
 
