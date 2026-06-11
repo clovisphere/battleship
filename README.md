@@ -72,7 +72,7 @@ blip/
 - [x] Multiple creatures with per-type colours
 - [x] Pirate/comic-book redesign with Captain Blip mascot
 - [ ] End-to-end tests (Playwright)
-- [x] Dockerfile + docker-compose for containerised local dev
+- [x] Dockerfile for containerised deployment
 - [ ] Makefile with `dev`, `test`, `build`, and `docker` targets
 - [ ] Deployment workflow (GitHub Actions — build, push image, deploy)
 - [ ] Custom favicon (Captain Blip)
