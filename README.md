@@ -84,6 +84,6 @@ blip/
 - [x] Dockerfile for containerised deployment
 - [x] Makefile with `dev`, `test`, `build`, and `docker` targets
 - [ ] Deployment workflow (GitHub Actions — build, push image, deploy)
-- [ ] Custom favicon (Captain Blip)
+- [x] Custom favicon (Captain Blip)
 - [x] Early-loss rule: end the game when shots remaining < beasts remaining (unwinnable state)
 - [ ] Per-level theming: distinct background/palette for ninja and hacker to reflect increasing danger
