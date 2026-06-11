@@ -27,8 +27,17 @@ No timer — it's all about the shots.
 
 ## Running locally
 
+**With Bun:**
+
 ```bash
 bun run dev
+```
+
+**With Docker:**
+
+```bash
+docker build -t blip .
+docker run -p 3000:3000 blip
 ```
 
 Then open `http://localhost:3000`.
