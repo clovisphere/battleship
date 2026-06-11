@@ -1,3 +1,7 @@
+[![Tests](https://github.com/clovisphere/blip/actions/workflows/test.yml/badge.svg)](https://github.com/clovisphere/blip/actions)
+[![Bun](https://img.shields.io/badge/Bun-1.2-black?logo=bun)](https://bun.sh)
+[![Vanilla JS](https://img.shields.io/badge/Vanilla_JS-ES2020-yellow?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
 ```
               ╔═════╗
               ║     ║
