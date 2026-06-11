@@ -17,21 +17,12 @@ const state = {
   soundOn: true,
 };
 
-try {
-  const s = JSON.parse(localStorage.getItem("blip_settings") || "{}");
-  if (typeof s.soundOn === "boolean") state.soundOn = s.soundOn;
-} catch (_) {}
-
 setSoundEnabled(state.soundOn);
 
 // ── helpers ───────────────────────────────────────────────────────────────────
 const setState = (patch) => {
   Object.assign(state, typeof patch === "function" ? patch(state) : patch);
   render();
-};
-
-const saveSound = () => {
-  try { localStorage.setItem("blip_settings", JSON.stringify({ soundOn: state.soundOn })); } catch (_) {}
 };
 
 // ── Captain Blip mascot ───────────────────────────────────────────────────────
@@ -280,7 +271,6 @@ document.addEventListener("click", (e) => {
     else if (a === "sound") {
       const on = !state.soundOn;
       setSoundEnabled(on);
-      saveSound();
       setState({ soundOn: on });
     }
   }
