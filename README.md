@@ -75,3 +75,4 @@ blip/
 - [ ] Dockerfile + docker-compose for containerised local dev
 - [ ] Makefile with `dev`, `test`, `build`, and `docker` targets
 - [ ] Deployment workflow (GitHub Actions — build, push image, deploy)
+- [ ] Custom favicon (Captain Blip)
