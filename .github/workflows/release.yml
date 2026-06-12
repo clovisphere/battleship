@@ -19,5 +19,6 @@ jobs:
           # secret is not set — note that GITHUB_TOKEN-created tags will NOT
           # trigger other workflows by design.
           token: ${{ secrets.RELEASE_TOKEN || secrets.GITHUB_TOKEN }}
+          target-branch: main
           config-file: release-please-config.json
           manifest-file: .release-please-manifest.json
