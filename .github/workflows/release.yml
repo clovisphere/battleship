@@ -14,9 +14,10 @@ jobs:
     steps:
       - uses: googleapis/release-please-action@5c625bfb5d1ff62eadeeb3772007f7f66fdcf071 # v4
         with:
-          # Use a PAT (RELEASE_TOKEN) so that the tag release-please creates
-          # will trigger the Docker workflow — GITHUB_TOKEN-created events
-          # cannot trigger other workflows by design.
-          token: ${{ secrets.RELEASE_TOKEN }}
+          # Prefer RELEASE_TOKEN (PAT) so tags created by release-please
+          # trigger the Docker workflow. Falls back to GITHUB_TOKEN when the
+          # secret is not set — note that GITHUB_TOKEN-created tags will NOT
+          # trigger other workflows by design.
+          token: ${{ secrets.RELEASE_TOKEN || secrets.GITHUB_TOKEN }}
           config-file: release-please-config.json
           manifest-file: .release-please-manifest.json
