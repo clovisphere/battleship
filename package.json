@@ -1,5 +1,6 @@
 {
   "name": "blip",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "bun run server.js",
