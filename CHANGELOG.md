@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.1](https://github.com/clovisphere/blip/compare/v0.3.0...v0.3.1) (2026-06-12)
+
+
+### Bug Fixes
+
+* **ui:** improve mobile play screen layout ([75b11e0](https://github.com/clovisphere/blip/commit/75b11e0349c81b632d5a6cdbefc6bd25743e702d))
+
 ## [0.3.0](https://github.com/clovisphere/blip/compare/v0.2.0...v0.3.0) (2026-06-12)
 
 
